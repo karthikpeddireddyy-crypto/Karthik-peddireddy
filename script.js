@@ -204,7 +204,7 @@ const portfolioProjects = [
         id: "social-1",
         title: "Social Reel Edit",
         category: "Social Reel",
-        video: "social reel.mp4",
+        video: "https://xhbjntx7hgyxzca1.public.blob.vercel-storage.com/social%20reel.mp4",
         year: "2026",
         role: "Video Editor",
         description: "Fast-paced vertical reel designed for maximum retention on Instagram and TikTok.",
@@ -223,7 +223,7 @@ const portfolioProjects = [
         id: "motion-1",
         title: "TEDx Ticket Promo",
         category: "Motion Design",
-        video: "Book Tedx ticket .mp4",
+        video: "https://xhbjntx7hgyxzca1.public.blob.vercel-storage.com/Book%20Tedx%20ticket%20.mp4",
         year: "2026",
         role: "Motion Designer",
         description: "Dynamic motion graphics and kinetic typography for event promotion.",
@@ -242,7 +242,7 @@ const portfolioProjects = [
         id: "promo-1",
         title: "Xcelerate Launch",
         category: "Promotional",
-        video: "xcelerate.mp4",
+        video: "https://xhbjntx7hgyxzca1.public.blob.vercel-storage.com/xcelerate.mp4",
         year: "2026",
         role: "Video Editor",
         description: "Sleek product showcase combining fast-paced edits with custom sound design.",
@@ -272,7 +272,9 @@ function renderPortfolio() {
       html += `
         <article class="portfolio-item ${item.aspect}" data-project-id="${item.id}" data-cursor="PLAY">
           <div class="portfolio-media-wrapper">
-            <video src="${item.video}" muted loop playsinline class="portfolio-video" preload="metadata"></video>
+            <video autoplay loop muted playsinline preload="metadata" crossorigin="anonymous" class="portfolio-video">
+              <source src="${item.video}" type="video/mp4">
+            </video>
             <div class="play-indicator">
                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </div>
@@ -338,8 +340,8 @@ function openProjectModal(projectId) {
   
   const modalVideo = document.getElementById('modalVideoElement');
   if (modalVideo) {
-    modalVideo.src = data.video;
-    // modalVideo.poster = data.thumbnail;
+    modalVideo.innerHTML = `<source src="${data.video}" type="video/mp4">`;
+    modalVideo.load();
     modalVideo.play().catch(() => {});
   }
   
