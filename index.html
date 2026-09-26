@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karthik Peddireddy — Video Editor &amp; Motion Designer</title>
+  <meta name="description" content="Portfolio of Karthik Peddireddy — video editor, motion designer and storyteller creating brand content, promotional videos, social media reels and YouTube videos.">
+  <meta name="keywords" content="Karthik Peddireddy, Video Editor, Motion Designer, Storyteller, Brand Content, Social Media Reels, YouTube Videos, Post Production">
+  <meta name="author" content="Karthik Peddireddy">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Karthik Peddireddy — Video Editor &amp; Motion Designer">
+  <meta property="og:description" content="I turn ideas, footage, and motion into stories people remember.">
+  <meta property="og:image" content="./hero_poster.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Film Grain SVG Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="cursor-follower" id="cursorFollower">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-brand">
+      <a href="#hero" class="brand-name">Karthik Peddireddy</a>
+      <div class="brand-status">
+        <span class="status-dot"></span> Available for Projects
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#heroWrapper" class="nav-link" data-cursor="VIEW">Home</a></li>
+        <li><a href="#work" class="nav-link" data-cursor="VIEW">Featured Works</a></li>
+        <li><a href="#about" class="nav-link" data-cursor="VIEW">About</a></li>
+        <li><a href="#contact" class="nav-link" data-cursor="VIEW">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <button class="nav-link" id="soundToggleBtn" style="font-family: var(--font-mono); font-size: 0.7rem;" data-cursor="TOGGLE">SOUND: OFF</button>
+      <a href="#contact" class="nav-cta" data-cursor="TALK">Let's Talk →</a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <ul class="mobile-nav-links">
+      <li><a href="#heroWrapper" class="mobile-nav-link">Home</a></li>
+      <li><a href="#work" class="mobile-nav-link">Featured Works</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION & SCROLL-DRIVEN VIDEO EXPERIENCE
+       ========================================================================== -->
+  <section class="hero-wrapper" id="heroWrapper">
+    <div class="hero-sticky-container" id="hero">
+      
+      <!-- Video & Canvas Backdrop -->
+      <div class="hero-media-container">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <video class="hero-video-fallback" id="heroVideo" autoplay loop muted playsinline poster="./hero_poster.jpg">
+          <source src="./hero_video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-gradient-overlay"></div>
+      </div>
+
+      <!-- Hero Overlay Content -->
+      <div class="hero-content">
+        <div class="hero-header-meta">
+          <span>PORTFOLIO / 2026</span>
+          <span class="meta-role-badge">CREATIVE POST-PRODUCTION</span>
+          <span>BASED IN INDIA · GLOBAL REMOTE</span>
+        </div>
+
+        <div class="hero-main-title-box">
+          <h1 class="hero-name">Karthik Peddireddy</h1>
+          <div class="hero-roles-bar">
+            <span>Video Editor</span>
+            <span class="roles-divider">•</span>
+            <span>Motion Designer</span>
+            <span class="roles-divider">•</span>
+            <span>Storyteller</span>
+          </div>
+          <p class="hero-supporting-line">
+            "I turn ideas, footage, and motion into stories people remember."
+          </p>
+          <div class="hero-cta-group">
+            <a href="#work" class="btn-primary" data-cursor="EXPLORE">View My Work ↓</a>
+            <a href="#contact" class="btn-secondary" data-cursor="CONTACT">Let's Work Together</a>
+          </div>
+        </div>
+
+        <div class="hero-footer-meta">
+          <div class="scroll-indicator">
+            <div class="scroll-mouse-icon">
+              <div class="scroll-wheel"></div>
+            </div>
+            <span>SCROLL TO SCRUB TIMELINE</span>
+          </div>
+          <div class="frame-counter-widget" id="frameCounterWidget">
+            FRAME 001 / 124
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTRODUCTION SECTION
+       ========================================================================== -->
+  <section class="intro-section" id="intro">
+    <div class="intro-container">
+      <div class="section-label">01 — PHILOSOPHY</div>
+      <h2 class="intro-headline">I Edit With Purpose.</h2>
+      <div class="intro-grid">
+        <p class="intro-copy-large">
+          I create videos that combine storytelling, rhythm, motion and visual design to communicate ideas clearly and keep people watching.
+        </p>
+        <p class="intro-copy-secondary">
+          From a raw timeline to a finished story — every cut, transition, frame and movement has a purpose.
+        </p>
+      </div>
+    </div>
+
+    <!-- Animated Marquee Ticker -->
+    <div class="ticker-container">
+      <div class="ticker-track">
+        <div class="ticker-item">STORYTELLING <span>•</span></div>
+        <div class="ticker-item">PACING &amp; RHYTHM <span>•</span></div>
+        <div class="ticker-item">MOTION DESIGN <span>•</span></div>
+        <div class="ticker-item">COLOR GRADING <span>•</span></div>
+        <div class="ticker-item">KINETIC TYPOGRAPHY <span>•</span></div>
+        <div class="ticker-item">AUDIENCE RETENTION <span>•</span></div>
+        <div class="ticker-item">STORYTELLING <span>•</span></div>
+        <div class="ticker-item">PACING &amp; RHYTHM <span>•</span></div>
+        <div class="ticker-item">MOTION DESIGN <span>•</span></div>
+        <div class="ticker-item">COLOR GRADING <span>•</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED WORKS (PORTFOLIO GRID)
+       ========================================================================== -->
+  <section class="work-section" id="work">
+    <div class="work-container">
+      <div class="work-header">
+        <div class="work-title-group">
+          <div class="section-label">02 — PORTFOLIO</div>
+          <h2>Featured Works</h2>
+          <p>Some things I've edited, designed and brought to life.</p>
+        </div>
+
+      <!-- Dynamic Projects Container -->
+      <div id="dynamic-portfolio-container"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MY CREATIVE PROCESS
+       ========================================================================== -->
+  <section class="process-section" id="process">
+    <div class="process-container">
+      <div class="section-label">04 — WORKFLOW</div>
+      <h2 class="editing-headline">From Idea to Final Frame.</h2>
+
+      <div class="workflow-flowchart">
+        <div class="flow-stage">
+          <div class="flow-marker">01</div>
+          <h3 class="flow-title">Understand</h3>
+          <p class="flow-desc">Identify the core message and target audience.</p>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-stage">
+          <div class="flow-marker">02</div>
+          <h3 class="flow-title">Structure</h3>
+          <p class="flow-desc">Build the story outline and establish pacing.</p>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-stage">
+          <div class="flow-marker">03</div>
+          <h3 class="flow-title">Edit</h3>
+          <p class="flow-desc">Shape the raw footage through precision cuts.</p>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-stage">
+          <div class="flow-marker">04</div>
+          <h3 class="flow-title">Refine</h3>
+          <p class="flow-desc">Polish color grading, audio, and micro-details.</p>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-stage">
+          <div class="flow-marker">05</div>
+          <h3 class="flow-title">Deliver</h3>
+          <p class="flow-desc">Export the high-quality final optimized video.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      
+      <!-- Portrait Image Box -->
+      <div class="about-portrait-box">
+        <img src="./about image.jpeg" alt="Karthik Peddireddy Portrait" class="about-portrait-img">
+        <div class="about-portrait-badge">
+          Karthik Peddireddy · Editor
+        </div>
+      </div>
+
+      <!-- Bio Copy & Evolution -->
+      <div class="about-bio-content">
+        <div class="section-label">05 — ABOUT</div>
+        <h2>Editing Visuals.<br>Designing Motion.<br>Telling Stories.</h2>
+        <p class="about-bio-text">
+          I'm Karthik Peddireddy, a video editor, motion designer and storyteller who enjoys turning ideas and raw footage into engaging visual experiences.
+          <br><br>
+          I work across brand content, promotional videos, social media reels and YouTube content, combining editing, motion and storytelling to create videos that communicate clearly and hold attention.
+        </p>
+
+        <!-- Timeline Evolution -->
+        <div class="evolution-timeline">
+          <div class="timeline-node">
+            <span class="timeline-phase">PHASE 01 — FOUNDATIONS</span>
+            <h4 class="timeline-title">Exploring Visual Storytelling</h4>
+            <p class="timeline-desc">Fascinated by film pacing, timeline editing, and the art of combining audio beats with visual cuts.</p>
+          </div>
+
+          <div class="timeline-node">
+            <span class="timeline-phase">PHASE 02 — MOTION DESIGN INTEGRATION</span>
+            <h4 class="timeline-title">Kinetic Graphics &amp; Brand Aesthetics</h4>
+            <p class="timeline-desc">Expanded into After Effects motion design, title animation, kinetic typography, and post-production VFX.</p>
+          </div>
+
+          <div class="timeline-node">
+            <span class="timeline-phase">PHASE 03 — COMMERCIAL &amp; DIGITAL CONTENT</span>
+            <h4 class="timeline-title">Crafting Content For Brands &amp; Creators</h4>
+            <p class="timeline-desc">Delivering high-retention video edits for brands, promotional campaigns, Instagram Reels, and YouTube channels.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="section-label" style="justify-content: center;">06 — CONTACT</div>
+      <h2 class="contact-headline-1">Have an Idea?</h2>
+      <h2 class="contact-headline-2">Let's turn it into a story.</h2>
+      
+      <p class="contact-subtext">
+        Whether it's a brand video, promotional campaign, social reel or YouTube project, let's create something worth watching.
+      </p>
+
+      <div class="contact-btn-row">
+        <a href="mailto:karthikpeddireddyy@gmail.com" class="btn-primary" data-cursor="EMAIL">Let's Work Together →</a>
+        <a href="mailto:karthikpeddireddyy@gmail.com" class="btn-secondary" data-cursor="MAIL">Email Me →</a>
+      </div>
+
+      <!-- Social Links Bar -->
+      <ul class="social-links-bar">
+        <li><a href="https://www.instagram.com/karthik5_/" class="social-link" target="_blank" rel="noopener noreferrer" data-cursor="LINK">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/karthik-peddireddy-a554a2328/" class="social-link" target="_blank" rel="noopener noreferrer" data-cursor="LINK">LinkedIn</a></li>
+        <li><a href="mailto:karthikpeddireddyy@gmail.com" class="social-link" data-cursor="LINK">Email</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div>
+      <div class="footer-brand">Karthik Peddireddy</div>
+      <div>VIDEO EDITOR · MOTION DESIGNER · STORYTELLER</div>
+    </div>
+    <div>
+      © 2026 Karthik Peddireddy. All rights reserved.
+    </div>
+    <div>
+      <a href="#hero" class="social-link" data-cursor="TOP">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT CASE STUDY MODAL LIGHTBOX
+       ========================================================================== -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-video-viewport">
+        <video id="modalVideoElement" controls poster="./hero_poster.jpg">
+          <source src="./hero_video.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="section-label" id="modalCategory">BRAND CONTENT · 2026</div>
+      <h2 id="modalTitle" style="font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 3rem); text-transform: uppercase; margin-bottom: 1rem;">Project Title</h2>
+      
+      <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); margin-bottom: 2rem;">
+        Role: <span id="modalRole" style="color: var(--text-main);">Video Editor &amp; Motion Designer</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 2rem;">
+        <div>
+          <h4 style="font-family: var(--font-display); text-transform: uppercase; margin-bottom: 0.5rem; color: var(--text-main);">Project Overview</h4>
+          <p id="modalDescription" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+          
+          <h4 style="font-family: var(--font-display); text-transform: uppercase; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-main);">Creative Approach</h4>
+          <p id="modalApproach" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-display); text-transform: uppercase; margin-bottom: 0.5rem; color: var(--text-main);">Editing Breakdown</h4>
+          <p id="modalEditing" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+
+          <h4 style="font-family: var(--font-display); text-transform: uppercase; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-main);">Motion Design Details</h4>
+          <p id="modalMotion" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Engine -->
+  <script src="./script.js"></script>
+</body>
+</html>
