@@ -78,7 +78,7 @@
       <!-- Video & Canvas Backdrop -->
       <div class="hero-media-container">
         <canvas class="hero-canvas" id="heroCanvas"></canvas>
-        <video class="hero-video-fallback" id="heroVideo" autoplay loop muted playsinline poster="./hero_poster.jpg">
+        <video class="hero-video-fallback" id="heroVideo" autoplay loop muted playsinline preload="metadata" crossorigin="anonymous" poster="./hero_poster.jpg">
           <source src="https://xhbjntx7hgyxzca1.public.blob.vercel-storage.com/hero_video.mp4" type="video/mp4">
         </video>
         <div class="hero-gradient-overlay"></div>
@@ -319,7 +319,7 @@
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
       
       <div class="modal-video-viewport">
-        <video id="modalVideoElement" controls poster="./hero_poster.jpg">
+        <video id="modalVideoElement" controls playsinline preload="metadata" crossorigin="anonymous" poster="./hero_poster.jpg">
           <source src="./hero_video.mp4" type="video/mp4">
         </video>
       </div>
